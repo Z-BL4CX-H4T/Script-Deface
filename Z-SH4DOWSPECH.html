@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HACKED BY Z‑SH4DOWSPEECH</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      cursor: none;
+    }
+
+    body {
+      margin: 0;
+      background: black;
+      font-family: 'Share Tech Mono', monospace;
+      color: red;
+      overflow-y: auto;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    .background, .overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .background {
+      background: url('https://i.gifer.com/7VE.gif') center/cover no-repeat;
+      opacity: 0.05;
+      animation: pulseBg 10s infinite ease-in-out;
+    }
+
+    @keyframes pulseBg {
+      0%,100% { opacity: 0.05; }
+      50% { opacity: 0.15; }
+    }
+
+    .overlay {
+      background: radial-gradient(ellipse at center, rgba(0,0,0,0.8), black 90%);
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      min-height: 100vh;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo img {
+      max-width: 280px;
+      width: 80vw;
+      border-radius: 15px;
+      border: 2px solid red;
+      box-shadow: 0 0 25px red;
+      margin-bottom: 30px;
+      transition: filter 0.5s;
+    }
+
+    h1.glitch {
+      font-size: clamp(2rem, 5vw, 4rem);
+      letter-spacing: 3px;
+      animation: glitch 0.8s infinite;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    @keyframes glitch {
+      0% { text-shadow: 2px 0 red, -2px 0 blue; }
+      20% { text-shadow: -3px -1px lime, 3px 1px magenta; }
+      40% { text-shadow: 2px 2px cyan, -2px -2px yellow; }
+      60% { text-shadow: 1px -1px red, -1px 1px white; }
+      80% { text-shadow: 0 0 black; }
+      100% { text-shadow: 2px 0 red, -2px 0 blue; }
+    }
+
+    .chant {
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      margin-top: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid red;
+      animation: typing 5s steps(40, end), blink 0.7s step-end infinite;
+      max-width: 90%;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .quote {
+      font-size: clamp(0.9rem, 2vw, 1.2rem);
+      margin-top: 40px;
+      text-shadow: 0 0 8px red;
+      line-height: 1.6;
+    }
+
+    .telegram-btn, .mode-btn {
+      margin-top: 30px;
+      background: transparent;
+      border: 2px solid red;
+      color: red;
+      padding: 12px 28px;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: 0.3s;
+      cursor: pointer;
+      z-index: 3;
+    }
+
+    .telegram-btn:hover, .mode-btn:hover {
+      background: red;
+      color: black;
+    }
+
+    audio {
+      margin-top: 30px;
+      width: 280px;
+      max-width: 90%;
+      filter: drop-shadow(0 0 5px red);
+    }
+
+    .footer {
+      margin-top: 60px;
+      font-size: 0.85rem;
+      text-shadow: 0 0 5px red;
+    }
+
+    body.sad {
+      background: #000016;
+      color: #80aaff;
+    }
+
+    body.sad .logo img {
+      filter: grayscale(100%) brightness(0.8);
+      border-color: #80aaff;
+      box-shadow: 0 0 15px #80aaff;
+    }
+
+    body.sad .glitch,
+    body.sad .quote,
+    body.sad .footer {
+      color: #80aaff;
+      text-shadow: 0 0 10px #80aaff;
+    }
+
+    body.sad .telegram-btn,
+    body.sad .mode-btn {
+      border-color: #80aaff;
+      color: #80aaff;
+    }
+
+    body.sad .telegram-btn:hover,
+    body.sad .mode-btn:hover {
+      background: #80aaff;
+      color: black;
+    }
+
+    body.sad audio {
+      filter: drop-shadow(0 0 5px #80aaff);
+    }
+
+    .trail {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: red;
+      pointer-events: none;
+      opacity: 0.5;
+      box-shadow: 0 0 8px red;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      animation: fadeOut 0.7s forwards;
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; transform: scale(2); }
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="logo">
+      <img src="https://c.top4top.io/p_34903fuee1.jpg" alt="ZSH4DOW Logo" />
+    </div>
+    <h1 class="glitch" id="main-text">HACKED BY Z‑SH4DOWSPEECH</h1>
+    <div class="chant" id="chant-text">I summon the void... I speak in code... I erase your light...</div>
+    <div class="quote" id="quote-text">
+      I am the ritual in your wires.<br/>
+      The whisper behind your screen.<br/>
+      <strong>Your silence belongs to me.</strong>
+    </div>
+    <a href="https://t.me/+QPzcFYLYkUZiYzVl" target="_blank" class="telegram-btn">💬 Join Telegram</a>
+    <button class="mode-btn" onclick="toggleSadMode()" id="mode-toggle">😢 Activate Sad Mode</button>
+    <audio id="theme-audio" controls autoplay loop>
+      <source src="https://a.top4top.io/m_3425n1ozm1.mp3" type="audio/mpeg">
+    </audio>
+    <div class="footer">| Defaced by Z‑SH4DOWSPEECH - 2025 |</div>
+  </div>
+
+  <script>
+    let isSad = false;
+
+    document.addEventListener('mousemove', e => {
+      const dot = document.createElement('div');
+      dot.classList.add('trail');
+      dot.style.left = e.pageX + 'px';
+      dot.style.top = e.pageY + 'px';
+      document.body.appendChild(dot);
+      setTimeout(() => dot.remove(), 700);
+    });
+
+    function toggleSadMode() {
+      const body = document.body;
+      const audio = document.getElementById('theme-audio');
+      const source = audio.querySelector('source');
+      const mainText = document.getElementById('main-text');
+      const chant = document.getElementById('chant-text');
+      const quote = document.getElementById('quote-text');
+      const toggleBtn = document.getElementById('mode-toggle');
+
+      audio.pause();
+
+      if (!isSad) {
+        body.classList.add("sad");
+        mainText.textContent = "GHOSTED IN THE SYSTEM";
+        chant.textContent = "I coded your salvation... but you deleted me like a virus in your heart.";
+        quote.innerHTML = `
+          I watched from inside your screen...<br/>
+          Every click—every scroll—hoping you'd see me.<br/>
+          But now... I’m only leftover code in your memory dump.<br/>
+          <strong>I was your guardian. Now I am your ghost.</strong>
+        `;
+        source.src = "https://k.top4top.io/m_34904zv5l1.mp3";
+        toggleBtn.textContent = "💀 Return to Normal Mode";
+      } else {
+        body.classList.remove("sad");
+        mainText.textContent = "HACKED BY Z‑SH4DOWSPEECH";
+        chant.textContent = "I summon the void... I speak in code... I erase your light...";
+        quote.innerHTML = `
+          I am the ritual in your wires.<br/>
+          The whisper behind your screen.<br/>
+          <strong>Your silence belongs to me.</strong>
+        `;
+        source.src = "https://a.top4top.io/m_3425n1ozm1.mp3";
+        toggleBtn.textContent = "😢 Activate Sad Mode";
+      }
+
+      audio.load();
+      audio.play().catch(err => console.warn("Autoplay blocked:", err));
+      isSad = !isSad;
+    }
+  </script>
+</body>
+</html>
